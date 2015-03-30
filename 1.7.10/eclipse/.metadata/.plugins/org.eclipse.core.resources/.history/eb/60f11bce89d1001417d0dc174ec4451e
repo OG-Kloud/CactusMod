@@ -1,0 +1,16 @@
+package net.kloudspace.cactus;
+
+import net.kloudspace.cactus.entity.EntityCactusTNT;
+import cpw.mods.fml.common.registry.EntityRegistry;
+
+public class Common {
+	
+	public void register() {
+		EntityRegistry.registerModEntity(EntityCactusTNT.class, "cactusTNT", 255, Cactus.class, 0, 10, false);
+	}
+	
+	public void registerRenderer() {
+		
+	}
+
+}

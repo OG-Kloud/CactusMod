@@ -1,0 +1,24 @@
+package net.kloudspace.cactus.block;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.kloudspace.cactus.block.blocks.KBlocks;
+import net.kloudspace.cactus.utils.Reference;
+import net.minecraft.block.BlockTNT;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.util.IIcon;
+
+public class KCactusTNT extends BlockTNT {
+	
+    private IIcon field_150116_a;
+	private IIcon field_150115_b;
+
+	@SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister p_149651_1_)
+    {
+        this.blockIcon = p_149651_1_.registerIcon(Reference.MODID+":"+"cactustnt");
+        this.field_150116_a = p_149651_1_.registerIcon(Reference.MODID +":" +"cactusbrick");
+        this.field_150115_b = p_149651_1_.registerIcon(Reference.MODID +":" +"cactusbrick");
+    }
+
+}

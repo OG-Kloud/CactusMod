@@ -1,0 +1,13 @@
+package net.kloudspace.cactus.block;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class KWorkStone extends Block {
+
+	protected KWorkStone() {
+		super(Material.rock);
+	}
+	
+
+}

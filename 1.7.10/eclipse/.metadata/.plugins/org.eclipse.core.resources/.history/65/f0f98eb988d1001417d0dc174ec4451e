@@ -1,0 +1,13 @@
+package net.kloudspace.cactus;
+
+public class Common {
+	
+	public static void register() {
+		
+	}
+	
+	public static void registerRenderer() {
+		
+	}
+
+}

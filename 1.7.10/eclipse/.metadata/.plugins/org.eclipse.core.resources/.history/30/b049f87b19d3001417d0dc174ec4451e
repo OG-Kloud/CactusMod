@@ -1,0 +1,30 @@
+package net.kloudspace.cactus.utils;
+
+import net.kloudspace.cactus.entity.CactusFurnaceEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
+import net.minecraftforge.common.IExtendedEntityProperties;
+
+public class FurnaceProps implements IExtendedEntityProperties{
+	
+	public void cactusFurnace(CactusFurnaceEntity p_146101_1_) {}
+
+	@Override
+	public void saveNBTData(NBTTagCompound compound) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void loadNBTData(NBTTagCompound compound) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void init(Entity entity, World world) {
+		
+	}
+
+}

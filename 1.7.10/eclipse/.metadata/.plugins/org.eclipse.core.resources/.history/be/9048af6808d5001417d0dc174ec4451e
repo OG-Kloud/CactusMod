@@ -1,0 +1,5 @@
+package net.kloudspace.cactus.block.containers;
+
+public class HalfContainer {
+
+}

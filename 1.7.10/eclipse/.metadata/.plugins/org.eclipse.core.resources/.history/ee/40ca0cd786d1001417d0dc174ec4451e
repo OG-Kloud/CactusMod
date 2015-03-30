@@ -1,0 +1,22 @@
+package net.kloudspace.cactus.client;
+
+import net.kloudspace.cactus.Common;
+import net.kloudspace.cactus.entity.EntityCactusTNT;
+import net.kloudspace.cactus.entity.renderers.RenderCactusTNT;
+import cpw.mods.fml.client.registry.RenderingRegistry;
+
+public class Client extends Common{
+	
+	@Override
+	public void register() {
+		
+	}
+	
+	@Override
+	public void registerRenderer() {
+		RenderingRegistry.registerEntityRenderingHandler(EntityCactusTNT.class, new RenderCactusTNT());
+	}
+	
+	
+
+}

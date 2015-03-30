@@ -1,0 +1,7 @@
+package net.kloudspace.cactus.block;
+
+import net.minecraft.block.Block;
+
+public class SandWorkStone extends Block {
+
+}

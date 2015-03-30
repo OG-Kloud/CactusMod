@@ -1,0 +1,14 @@
+item.cactusDoorItem.name=Cactus Door
+item.cacDrop.name=Mushy Cactus Chunk
+item.cookedCactus.name=Hardened Cooked Cactus Chunk
+item.cacSand.name=Cactus Bound Sand
+tile.cacBricks.name=Cactus Brick
+tile.cacGlass.name=Cactus Glass
+tile.cacSlab.name=Cactus Brick Slab
+tile.cactusStairs.name=Cactus Brick Stairs
+tile.cacWalls.name=Cactus Brick Walls
+tile.cactuspressureplate.name=Cactus Pressure Plate
+tile.cacTNT.name=Cactus Brick Bound TNT
+tile.reinforcedCactusBlock.name=Reinforced Cactus Bricks
+tile.cactusFurnace.name=Cactus Brick Oven
+tile.cactusFurnace_lit.name=Lit Cactus Brick Oven

@@ -1,0 +1,25 @@
+package net.kloudspace.cactus.block.blocks;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import net.kloudspace.cactus.block.KSlab;
+import net.minecraft.block.Block;
+
+public class KBlocks {
+	public static Map<String, Block> names = new HashMap<String, Block>();
+	//Blocks
+	public static Block cactusBrick;
+	public static Block cactusWalls;
+	public static Block cactusGlass;
+	public static Block cactusDoor;
+	public static Block cactusStairs;
+	public static Block cactusSlab;
+	public static Block cactusPP;
+	public static Block cactusTNT;
+	public static Block cactusFlower;
+	public static Block double_cactusslab;
+	public static Block reinforcedBlock;
+	public static Block cactusFurnace;
+
+}

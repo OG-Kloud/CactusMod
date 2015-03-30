@@ -1,0 +1,23 @@
+package net.kloudspace.cactus.client;
+
+import net.kloudspace.cactus.Common;
+import net.kloudspace.cactus.entity.EntityCactusTNT;
+import net.kloudspace.cactus.entity.renderers.RenderCactusTNT;
+import net.kloudspace.cactus.utils.Reference;
+import cpw.mods.fml.client.registry.RenderingRegistry;
+
+public class Client extends Common{
+	
+	
+	public static void register() {
+		
+	}
+	
+	public static void registerRenderer() {
+		Reference.logger.info("RegisterRenderers called in client proxy");
+		RenderingRegistry.registerEntityRenderingHandler(EntityCactusTNT.class, new RenderCactusTNT());
+	}
+	
+	
+
+}

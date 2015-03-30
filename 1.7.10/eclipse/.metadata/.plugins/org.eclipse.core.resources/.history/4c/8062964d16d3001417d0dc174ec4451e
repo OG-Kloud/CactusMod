@@ -1,0 +1,9 @@
+package net.kloudspace.cactus.utils;
+
+import net.kloudspace.cactus.entity.CactusFurnaceEntity;
+
+public class FurnaceProps {
+	
+	public void cactusFurnace(CactusFurnaceEntity p_146101_1_) {}
+
+}

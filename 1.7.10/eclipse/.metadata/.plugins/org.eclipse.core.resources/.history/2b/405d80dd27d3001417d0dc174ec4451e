@@ -1,0 +1,53 @@
+package net.kloudspace.cactus.guis;
+
+import net.kloudspace.cactus.block.containers.ContainerFurnace;
+import net.kloudspace.cactus.entity.TileEntityCactusFurnace;
+import net.kloudspace.cactus.utils.Reference;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.util.ResourceLocation;
+
+import org.lwjgl.opengl.GL11;
+
+import com.sun.imageio.plugins.common.I18N;
+
+public class GUICacFurn  extends GuiContainer{
+	public static final ResourceLocation texture = new ResourceLocation("textures/gui/furnace.png");
+	
+	public TileEntityCactusFurnace furn;
+	
+	public GUICacFurn(InventoryPlayer invPlayer, TileEntityCactusFurnace entity) {
+		super(new ContainerFurnace(invPlayer, entity));
+		
+		this.furn = entity;
+
+		this.xSize = 176;
+		this.ySize = 165;
+	}
+	
+	public void drawGuiContainerForegroundLayer(int par1, int par2){
+		String s = this.furn.isInvNameLocalized() ? this.furn.getInvName() : I18N.getString(this.furn.getInvName());
+		this.fontRendererObj.drawString(s, this.xSize / 2 - this.fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
+		this.fontRendererObj.drawString(I18N.getString("container.inventory"), 8, this.ySize - 96 + 5, 4210752);
+	}
+	
+	public void drawGuiContainerBackgroundLayer(float f, int j, int i) {
+		GL11.glColor4f(1F, 1F, 1F, 1F);
+		
+		Minecraft.getMinecraft().getTextureManager().
+		bindTexture(texture);
+		
+		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
+		
+		int i1;
+
+		if(this.furn.hasPower()){
+			i1 = this.furn.getPowerRemainingScaled(45);
+			this.drawTexturedModalRect(guiLeft + 8, guiTop + 53 - i1, 176, 62 - i1, 16, i1);
+		}
+		
+		i1 = this.furn.getCookProgressScaled(24);
+		this.drawTexturedModalRect(guiLeft + 79, guiTop + 34, 176, 0, i1 + 1, 16);
+	}
+}

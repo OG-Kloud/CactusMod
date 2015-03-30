@@ -1,0 +1,7 @@
+package net.kloudspace.cactus.client;
+
+import net.kloudspace.cactus.Common;
+
+public class Client extends Common{
+
+}

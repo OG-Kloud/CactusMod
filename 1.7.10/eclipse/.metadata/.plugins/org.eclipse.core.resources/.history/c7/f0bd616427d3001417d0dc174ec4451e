@@ -1,0 +1,50 @@
+package net.kloudspace.cactus.block;
+
+import net.kloudspace.cactus.block.blocks.KBlocks;
+import net.kloudspace.cactus.block.containers.FurnaceContainer;
+import net.kloudspace.cactus.entity.TileEntityCactusFurnace;
+import net.kloudspace.cactus.utils.Reference;
+import net.minecraft.block.BlockPressurePlate;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class KBlock {
+	private static final String blocks = "Registering Mod Blocks to the Game";
+	private static final String folder = Reference.MODID + ":";
+	//Blocks
+	/*
+	 * Method to call
+	 * To Register and Define Blocks in the Game
+	 */
+	public static void call() {
+		Reference.logger.info(blocks);
+		KBlocks.cactusBrick = new KBrick("brick").setCreativeTab(CreativeTabs.tabBlock);
+		GameRegistry.registerBlock(KBlocks.cactusBrick, "cacBricks");
+		KBlocks.cactusDoor = new KDoor(Material.cactus, "door").setCreativeTab(CreativeTabs.tabBlock);
+		GameRegistry.registerBlock(KBlocks.cactusDoor, "cacDoor");
+		KBlocks.cactusGlass = new KGlass("glass", false).setCreativeTab(CreativeTabs.tabBlock);
+		GameRegistry.registerBlock(KBlocks.cactusGlass, "cacGlass");
+		KBlocks.cactusSlab = new CactusSlab(false).setCreativeTab(CreativeTabs.tabBlock);
+		GameRegistry.registerBlock(KBlocks.cactusSlab, "cacSlab");
+		KBlocks.double_cactusslab = new CactusSlab(true).setCreativeTab(CreativeTabs.tabBlock);
+		GameRegistry.registerBlock(KBlocks.double_cactusslab, "dcacSlab");
+		KBlocks.cactusStairs = new KCactusStairs(KBlocks.cactusBrick, 0);
+		GameRegistry.registerBlock(KBlocks.cactusStairs, "cactusStairs");
+		KBlocks.cactusWalls = new KCactusWall(KBlocks.cactusBrick);
+		GameRegistry.registerBlock(KBlocks.cactusWalls, "cacWalls");
+		KBlocks.cactusPP = new KCactusPressurePlate("cactus_pressurePlate", Material.cactus, BlockPressurePlate.Sensitivity.everything);
+		GameRegistry.registerBlock(KBlocks.cactusPP, "cactuspressureplate");
+		KBlocks.cactusTNT = new KCactusTNT(Material.tnt);//BlockTNT
+		GameRegistry.registerBlock(KBlocks.cactusTNT, "cacTNT");
+		KBlocks.reinforcedBlock = new KReinforced().setHardness(50.0F).setResistance(2000.0F).setBlockTextureName(folder +"cactusbrick").setBlockName("cacReinforced");
+		GameRegistry.registerBlock(KBlocks.reinforcedBlock, "reinforcedCactusBlock");
+		KBlocks.cactusFurnace = new FurnaceContainer(false);
+		KBlocks.cactusFurnace_lit = (new FurnaceContainer(true));
+		GameRegistry.registerBlock(KBlocks.cactusFurnace, "cactusFurnace");
+		GameRegistry.registerBlock(KBlocks.cactusFurnace_lit, "cactusFurnaceLit");
+		GameRegistry.registerTileEntity(TileEntityCactusFurnace.class, "cactusFurnace");
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package net.kloudspace.cactus.entity;
+
+public class EntityCactusTNT {
+
+}
